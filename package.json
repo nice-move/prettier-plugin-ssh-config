@@ -1,0 +1,67 @@
+{
+  "name": "prettier-plugin-ssh-config",
+  "version": "0.0.0",
+  "description": "Prettier plugin for ssh config",
+  "license": "MIT",
+  "author": {
+    "name": "Eric Chen",
+    "email": "airkro@qq.com"
+  },
+  "keywords": [
+    "config",
+    "prettier",
+    "prettier-plugin",
+    "ssh",
+    "ssh-config"
+  ],
+  "homepage": "https://www.npmjs.com/package/prettier-plugin-ssh-config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nice-move/prettier-plugin-ssh-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nice-move/prettier-plugin-ssh-config/issues"
+  },
+  "main": "index.cjs",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "lint": "nice-move lint",
+    "prepare": "git config core.hooksPath .hooks",
+    "prepublishOnly": "npm run lint && npm test",
+    "test": "ava --fail-fast"
+  },
+  "dependencies": {
+    "ssh-config": "^4.0.6"
+  },
+  "devDependencies": {
+    "@nice-move/cli": "^0.5.27",
+    "@nice-move/commitlint-config": "^0.1.4",
+    "@nice-move/eslint-config-base": "^0.5.50",
+    "@nice-move/prettier-config": "^0.4.8",
+    "ava": "^3.15.0",
+    "commitlint": "^12.1.4",
+    "eslint": "^7.30.0",
+    "eslint-plugin-ava": "^12.0.0",
+    "garou": "^0.1.37",
+    "prettier": "^2.3.2"
+  },
+  "peerDependencies": {
+    "prettier": "^2.3.2"
+  },
+  "engines": {
+    "node": "^12.22.0 || ^14.17.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "commitlint": {
+    "extends": "@nice-move/commitlint-config"
+  },
+  "eslintConfig": {
+    "extends": "@nice-move/eslint-config-base"
+  },
+  "prettier": "@nice-move/prettier-config"
+}
