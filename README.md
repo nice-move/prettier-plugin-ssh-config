@@ -28,7 +28,7 @@ prettier --write ssh_config
 
 To support custom config name:
 
-```json
+```jsonc
 // .prettierrc.json
 {
   "overrides": [

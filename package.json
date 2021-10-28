@@ -1,6 +1,6 @@
 {
   "name": "prettier-plugin-ssh-config",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Prettier plugin for ssh config",
   "license": "MIT",
   "author": {
@@ -28,30 +28,30 @@
   ],
   "scripts": {
     "lint": "nice-move lint",
-    "prepare": "git config core.hooksPath .hooks",
+    "prepare": "git config core.hooksPath .githooks",
     "prepublishOnly": "npm run lint && npm test",
     "test": "ava --fail-fast"
   },
   "dependencies": {
-    "ssh-config": "^4.0.6"
+    "ssh-config": "^4.1.1"
   },
   "devDependencies": {
-    "@nice-move/cli": "^0.5.27",
-    "@nice-move/commitlint-config": "^0.1.4",
-    "@nice-move/eslint-config-base": "^0.5.50",
-    "@nice-move/prettier-config": "^0.4.8",
+    "@nice-move/cli": "^0.5.31",
+    "@nice-move/commitlint-config": "^0.2.2",
+    "@nice-move/eslint-config-base": "^0.5.65",
+    "@nice-move/prettier-config": "^0.5.0",
     "ava": "^3.15.0",
-    "commitlint": "^12.1.4",
-    "eslint": "^7.30.0",
-    "eslint-plugin-ava": "^12.0.0",
-    "garou": "^0.1.37",
-    "prettier": "^2.3.2"
+    "commitlint": "^13.2.1",
+    "eslint": "^7.32.0",
+    "eslint-plugin-ava": "^13.1.0",
+    "garou": "^0.2.1",
+    "prettier": "^2.4.1"
   },
   "peerDependencies": {
-    "prettier": "^2.3.2"
+    "prettier": "^2.4.1"
   },
   "engines": {
-    "node": "^12.22.0 || ^14.17.0"
+    "node": "^12.22.0 || ^14.17.0 || ^16.13.0"
   },
   "publishConfig": {
     "access": "public",
