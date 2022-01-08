@@ -26,6 +26,16 @@ npm install prettier prettier-plugin-ssh-config --save-dev
 prettier --write ssh_config
 ```
 
+### Support Filenames
+
+- ssh.config
+- ssh_config
+- ssh-config
+- sshconfig
+- \*.ssh_config
+- \*.ssh-config
+- \*.sshconfig
+
 To support custom config name:
 
 ```jsonc

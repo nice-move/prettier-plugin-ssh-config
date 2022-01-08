@@ -9,6 +9,7 @@ function format(data, { tab, linebreak }) {
     /* eslint-disable no-param-reassign */
     data[index].before = index === 0 ? '' : linebreak;
     data[index].after = linebreak;
+
     if (item.config) {
       item.config.forEach((_, subIndex) => {
         data[index].config[subIndex].before = tab;
@@ -17,6 +18,7 @@ function format(data, { tab, linebreak }) {
     }
     /* eslint-enable no-param-reassign */
   });
+
   return data.toString();
 }
 
@@ -32,6 +34,11 @@ module.exports = {
       name: 'SSH Config',
       parsers: [name],
       filenames: ['ssh_config', 'ssh.config', 'ssh-config', 'sshconfig'],
+      extensions: ['.ssh_config', '.ssh-config', '.sshconfig'],
+      group: 'INI',
+      aceMode: 'text',
+      tmScope: 'source.ssh-config',
+      language_id: 554920715,
     },
   ],
   parsers: {

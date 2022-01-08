@@ -36,19 +36,22 @@
     "ssh-config": "^4.1.1"
   },
   "devDependencies": {
-    "@nice-move/cli": "^0.5.31",
-    "@nice-move/commitlint-config": "^0.2.2",
-    "@nice-move/eslint-config-base": "^0.5.65",
-    "@nice-move/prettier-config": "^0.5.0",
-    "ava": "^3.15.0",
-    "commitlint": "^13.2.1",
-    "eslint": "^7.32.0",
+    "@nice-move/cli": "^0.6.0",
+    "@nice-move/commitlint-config": "^0.5.0",
+    "@nice-move/eslint-config-base": "^0.6.0",
+    "@nice-move/prettier-config": "^0.5.1",
+    "ava": "^4.0.0",
+    "commitlint": "^16.0.1",
+    "eslint": "^8.6.0",
     "eslint-plugin-ava": "^13.1.0",
-    "garou": "^0.2.1",
-    "prettier": "^2.4.1"
+    "garou": "^0.3.8",
+    "prettier": "^2.5.1"
   },
   "peerDependencies": {
-    "prettier": "^2.4.1"
+    "prettier": "^2.5.1"
+  },
+  "resolutions": {
+    "prettier-plugin-ssh-config": "link:."
   },
   "engines": {
     "node": "^12.22.0 || ^14.17.0 || ^16.13.0"
