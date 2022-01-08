@@ -13,7 +13,7 @@ function format(string, options) {
 
 const source = `  IdentityFile ~/.ssh/id_rsa
 
-\tHost tahoe
+\tHost   tahoe   544555
     HostName tahoe.com
   Host *
 User keanu
@@ -21,7 +21,7 @@ User keanu
 
 const expected = `IdentityFile ~/.ssh/id_rsa
 
-Host tahoe
+Host tahoe 544555
   HostName tahoe.com
 
 Host *

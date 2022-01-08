@@ -2,25 +2,9 @@
 
 const SSHConfig = require('ssh-config');
 
+const transform = require('./lib/transform.cjs');
+
 const name = 'ssh-config';
-
-function format(data, { tab, linebreak }) {
-  data.forEach((item, index) => {
-    /* eslint-disable no-param-reassign */
-    data[index].before = index === 0 ? '' : linebreak;
-    data[index].after = linebreak;
-
-    if (item.config) {
-      item.config.forEach((_, subIndex) => {
-        data[index].config[subIndex].before = tab;
-        data[index].config[subIndex].after = linebreak;
-      });
-    }
-    /* eslint-enable no-param-reassign */
-  });
-
-  return data.toString();
-}
 
 const breaks = {
   lf: '\n',
@@ -50,13 +34,15 @@ module.exports = {
   printers: {
     [name]: {
       print: (path, { endOfLine, useTabs, tabWidth }) => {
-        const data = path.getValue();
+        const ast = path.getValue();
 
         const tab = useTabs ? '\t' : ' '.repeat(tabWidth);
 
         const linebreak = breaks[endOfLine];
 
-        return format(data, { tab, linebreak });
+        const newAst = transform(ast, { tab, linebreak });
+
+        return newAst.toString();
       },
     },
   },
