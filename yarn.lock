@@ -23,10 +23,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@commitlint/cli@^16.0.1":
-  version "16.0.1"
-  resolved "https://registry.yarnpkg.com/@commitlint/cli/-/cli-16.0.1.tgz#21905c898ebece7da42277209022b1bc80c4fb39"
-  integrity sha512-61gGRy65WiVDRsqP0dAR2fAgE3qrTBW3fgz9MySv32y5Ib3ZXXDDq6bGyQqi2dSaPuDYzNCRwwlC7mmQM73T/g==
+"@commitlint/cli@^16.0.2":
+  version "16.0.2"
+  resolved "https://registry.yarnpkg.com/@commitlint/cli/-/cli-16.0.2.tgz#393b03793fc59b93e5f4dd7dd535a6cc5a7413ca"
+  integrity sha512-Jt7iaBjoLGC5Nq4dHPTvTYnqPGkElFPBtTXTvBpTgatZApczyjI2plE0oG4GYWPp1suHIS/VdVDOMpPZjGVusg==
   dependencies:
     "@commitlint/format" "^16.0.0"
     "@commitlint/lint" "^16.0.0"
@@ -659,10 +659,10 @@ author-regex@^1.0.0:
   resolved "https://mirrors.cloud.tencent.com/npm/author-regex/-/author-regex-1.0.0.tgz#d08885be6b9bbf9439fe087c76287245f0a81450"
   integrity sha1-0IiFvmubv5Q5/gh8dihyRfCoFFA=
 
-ava@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/ava/-/ava-4.0.0.tgz#9df5f8da7ece86869a66186f139259897aeb2fbf"
-  integrity sha512-XEVx8EE/ZseJ3nz3nfVG+UoT4aGyUmD5s6SZFs5Aqi04Yr77DZAx7ItyW5hThtYywkOLdsM68as/u6P5fmb52Q==
+ava@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/ava/-/ava-4.0.1.tgz#dadc24ff5f41f48ff8d5cd9b80a9de9d1ffdf016"
+  integrity sha512-+12A/JDWyShBCZAKISEEPyM2dwkUrrAfPILqXi4LI4Aa58d92PzjY829hmuoSeACPNqrn2Wlbnja8c/n7bKV6Q==
   dependencies:
     acorn "^8.7.0"
     acorn-walk "^8.2.0"
@@ -977,12 +977,12 @@ commander@^8.2.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-8.3.0.tgz#4837ea1b2da67b9c616a67afbb0fafee567bca66"
   integrity sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==
 
-commitlint@^16.0.1:
-  version "16.0.1"
-  resolved "https://registry.yarnpkg.com/commitlint/-/commitlint-16.0.1.tgz#d6b30711e426ef1810c84f6df8f65ec11b561dde"
-  integrity sha512-LShxd2o07z7uW6Z5oEIHChODlvBKO9JtNgWjxbaqLgL/SFLy8gRoWcwJrgOk/F7WA564TYaDWEBAELyVEmpSzw==
+commitlint@^16.0.2:
+  version "16.0.2"
+  resolved "https://registry.yarnpkg.com/commitlint/-/commitlint-16.0.2.tgz#55004513c6d1928e32f0989bc47a3a644776c771"
+  integrity sha512-2gs6RT5q7Z1ustssIXZ9pHXml47LkMvZhAmQcKtjEYzixkqKP8eH/ty3pUjlVcidGWRzw6K87U8PS9Nz1qKhuA==
   dependencies:
-    "@commitlint/cli" "^16.0.1"
+    "@commitlint/cli" "^16.0.2"
     "@commitlint/types" "^16.0.0"
 
 common-path-prefix@^3.0.0:
@@ -1382,10 +1382,10 @@ eslint-module-utils@^2.7.2:
     debug "^3.2.7"
     find-up "^2.1.0"
 
-eslint-plugin-ava@^13.1.0:
-  version "13.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-ava/-/eslint-plugin-ava-13.1.0.tgz#c53463e1ce46edd87501fc5329fa1db287b989af"
-  integrity sha512-Bdwyqv4Xh+4ekqbk601HcZNcx8+9ClNGz5GdbC2hv977jUPHQPDMx2arTD3zi1EeyOnOG2Kx22Ow3wecbPCRjQ==
+eslint-plugin-ava@^13.2.0:
+  version "13.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-ava/-/eslint-plugin-ava-13.2.0.tgz#a8e88fe62a259e11e0744d74aaff83f8ec4dbbe0"
+  integrity sha512-i5B5izsEdERKQLruk1nIWzTTE7C26/ju8qQf7JeyRv32XT2lRMW0zMFZNhIrEf5/5VvpSz2rqrV7UcjClGbKsw==
   dependencies:
     enhance-visitors "^1.0.0"
     eslint-utils "^3.0.0"

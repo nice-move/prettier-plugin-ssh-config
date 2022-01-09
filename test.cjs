@@ -1,7 +1,7 @@
 'use strict';
 
+// eslint-disable-next-line import/no-unresolved
 const test = require('ava').default;
-
 const prettier = require('prettier');
 
 function format(string, options) {
@@ -12,22 +12,36 @@ function format(string, options) {
 }
 
 const source = `  IdentityFile ~/.ssh/id_rsa
+#   hh9
+
+
+      #f
+#
 
 \tHost   tahoe   544555
     HostName tahoe.com
   Host *
+ # 5
 User keanu
+
     ForwardAgent true`;
 
 const expected = `IdentityFile ~/.ssh/id_rsa
+
+# hh9
+
+# f
+
+#
 
 Host tahoe 544555
   HostName tahoe.com
 
 Host *
+
+  # 5
   User keanu
-  ForwardAgent true
-`;
+  ForwardAgent true\n\n`;
 
 test('format - by name', (t) => {
   const result = format(source, {
@@ -55,12 +69,7 @@ test('format - useTabs', (t) => {
     },
   );
 
-  t.is(
-    result,
-    `Host *
-\tHostName test
-`,
-  );
+  t.is(result, 'Host *\n\tHostName test\n\n');
 });
 
 test('format - tabWidth', (t) => {
@@ -73,12 +82,7 @@ test('format - tabWidth', (t) => {
     },
   );
 
-  t.is(
-    result,
-    `Host *
-    HostName test
-`,
-  );
+  t.is(result, 'Host *\n    HostName test\n\n');
 });
 
 test('format - endOfLine', (t) => {
@@ -87,5 +91,5 @@ test('format - endOfLine', (t) => {
     endOfLine: 'cr',
   });
 
-  t.is(result, 'Host *\r  HostName test\r');
+  t.is(result, 'Host *\r  HostName test\r\r');
 });
