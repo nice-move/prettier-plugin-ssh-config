@@ -14,6 +14,17 @@ A [prettier] plugin for ssh config.
 [github-badge]: https://img.shields.io/npm/l/prettier-plugin-ssh-config.svg?style=flat-square&colorB=blue&logo=github
 [node-badge]: https://img.shields.io/node/v/prettier-plugin-ssh-config.svg?style=flat-square&colorB=green&logo=node.js
 
+## Examples
+
+```ssh-config
+Host *
+  HostName localhost
+  User root
+Host abc
+  HostName 127.0.0.1
+  User nginx
+```
+
 ## Installation
 
 ```sh
