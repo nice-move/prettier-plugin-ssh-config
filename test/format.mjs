@@ -21,15 +21,17 @@ User keanu
 const expected = `IdentityFile ~/.ssh/id_rsa
 
 # hh9
+
 # f
 #
+
 Host tahoe 544555
   HostName tahoe.com
-Host *
 
+Host *
   # 5
   User keanu
-  ForwardAgent true\n`;
+  ForwardAgent true\n\n`;
 
 test('format by name', (t) => {
   format(
