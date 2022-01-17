@@ -3,35 +3,66 @@ import test from 'ava';
 
 import { format } from './helper/lib.mjs';
 
-const source = `  IdentityFile ~/.ssh/id_rsa
-#   hh9
+const source = `
 
+#sfsfsf
+\tgfd6g   56
+  fd5465  5d54
 
-      #f
-#
+#ccccccccccc
+  # sfsccfsf
+# sfsfs
+ sss 5d54
 
-\tHost   tahoe   544555
-    HostName tahoe.com
-  Host *
- # 5
-User keanu
+\r\r  ssdd             4
 
-    ForwardAgent true`;
+matcH  fddfdfd
+aaa    5d54
 
-const expected = `IdentityFile ~/.ssh/id_rsa
+#   sfsfs
+Host     *        55
 
-# hh9
+# 4
 
-# f
-#
+HostName  localhost
+  User root
 
-Host tahoe 544555
-  HostName tahoe.com
+# sfsfs5
+   Host  abc 8
+  # sfsfs
 
-Host *
-  # 5
-  User keanu
-  ForwardAgent true\n\n`;
+HostName   127.0.0.1
+
+  User  nginx
+  # sfsccccccccccccccfs
+hhh nginx`;
+
+const expected = `# sfsfsf
+gfd6g 56
+fd5465 5d54
+
+# ccccccccccc
+# sfsccfsf
+# sfsfs
+sss 5d54
+ssdd 4
+
+Match fddfdfd
+  aaa 5d54
+
+# sfsfs
+Host * 55
+  # 4
+  HostName localhost
+  User root
+
+# sfsfs5
+Host abc 8
+  # sfsfs
+  HostName 127.0.0.1
+  User nginx
+  # sfsccccccccccccccfs
+  hhh nginx\n\n`;
 
 test('format by name', (t) => {
   format(
