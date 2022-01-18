@@ -62,7 +62,7 @@ Host abc 8
   HostName 127.0.0.1
   User nginx
   # sfsccccccccccccccfs
-  hhh nginx\n\n`;
+  hhh nginx\n`;
 
 test('format by name', (t) => {
   format(

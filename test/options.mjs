@@ -11,7 +11,7 @@ test('options - useTabs', (t) => {
       useTabs: true,
     },
     'Host  *\r    HostName  test',
-    'Host *\n\tHostName test\n\n',
+    'Host *\n\tHostName test\n',
   );
 });
 
@@ -23,7 +23,7 @@ test('options - tabWidth', (t) => {
       tabWidth: 4,
     },
     'Host  *\rHostName  test',
-    'Host *\n    HostName test\n\n',
+    'Host *\n    HostName test\n',
   );
 });
 
@@ -35,6 +35,6 @@ test('options - endOfLine', (t) => {
       endOfLine: 'cr',
     },
     'Host  *\r\nUser  test',
-    'Host *\r  User test\r\r',
+    'Host *\r  User test\r',
   );
 });
