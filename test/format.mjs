@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import test from 'ava';
 
 import { format } from './helper/lib.mjs';
@@ -25,8 +24,7 @@ Host     *        55
 # 4
 
 HostName  localhost
-  User root
-
+  User root\r\n
 # sfsfs5
    Host  abc 8
   # sfsfs
@@ -37,51 +35,20 @@ HostName   127.0.0.1
   # sfsccccccccccccccfs
 hhh nginx`;
 
-const expected = `# sfsfsf
-gfd6g 56
-fd5465 5d54
+test(
+  'format by name',
+  format,
+  {
+    filepath: 'ssh_config',
+  },
+  source,
+);
 
-# ccccccccccc
-# sfsccfsf
-# sfsfs
-sss 5d54
-ssdd 4
-
-Match fddfdfd
-  aaa 5d54
-
-# sfsfs
-Host * 55
-  # 4
-  HostName localhost
-  User root
-
-# sfsfs5
-Host abc 8
-  # sfsfs
-  HostName 127.0.0.1
-  User nginx
-  # sfsccccccccccccccfs
-  hhh nginx\n`;
-
-test('format by name', (t) => {
-  format(
-    t,
-    {
-      filepath: 'ssh_config',
-    },
-    source,
-    expected,
-  );
-});
-
-test('format by parser', (t) => {
-  format(
-    t,
-    {
-      parser: 'ssh-config',
-    },
-    source,
-    expected,
-  );
-});
+test(
+  'format by parser',
+  format,
+  {
+    parser: 'ssh-config',
+  },
+  source,
+);

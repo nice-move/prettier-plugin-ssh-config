@@ -1,14 +1,13 @@
-import prettier from 'prettier';
+import { format as formatter } from 'prettier';
 
-function pretty(string, options) {
-  return prettier.format(string, {
-    ...options,
-    plugins: ['.'],
-  });
-}
+export async function format(t, options, ...sources) {
+  for (const source of sources) {
+    const result = await formatter(source, {
+      ...options,
+      plugins: ['.'],
+      pluginSearchDirs: false,
+    });
 
-export function format(t, options, source, expected) {
-  const result = pretty(source, options);
-
-  t.is(result, expected);
+    t.snapshot(result);
+  }
 }
