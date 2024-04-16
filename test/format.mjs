@@ -15,7 +15,7 @@ const source = `
 
 \r\r  ssdd             4
 
-matcH  fddfdfd
+matcH host= fddfdfd
 aaa    5d54
 
 #   sfsfs
