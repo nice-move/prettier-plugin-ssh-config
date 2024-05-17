@@ -1,6 +1,7 @@
 import test from 'ava';
 
 import { format } from './helper/lib.mjs';
+import { source } from './helper/source.mjs';
 
 test(
   'options - useTabs',
@@ -9,7 +10,7 @@ test(
     parser: 'ssh-config',
     useTabs: true,
   },
-  'Host  *\r    HostName  test',
+  source,
 );
 
 test(
@@ -19,7 +20,7 @@ test(
     parser: 'ssh-config',
     tabWidth: 4,
   },
-  'Host  *\rHostName  test',
+  source,
 );
 
 test(
@@ -29,5 +30,5 @@ test(
     parser: 'ssh-config',
     endOfLine: 'cr',
   },
-  'Host  *\r\nUser  test',
+  source,
 );
